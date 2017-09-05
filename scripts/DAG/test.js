@@ -1,8 +1,12 @@
-const DAG = require('./dag');
+// const DAG = require('./dag');
 
-const testSentence = `恭喜你猜对了,我们的 NodeJS 程序还没起来呢
+const testSentence = '现在需要回过头来看看我们程序的变化。';
+// DAG.init();
+// const result = DAG.getDag(testSentence);
+// console.log(result);
 
-    目前先到这,现在需要回过头来看看我们的NodeJS程序的变化。`;
-DAG.init();
-const result = DAG.getDag(testSentence);
-console.log(result);
+const DAG = require('./dag2');
+
+const dag = new DAG();
+const ret = dag.getDAG(testSentence);
+console.log(JSON.stringify(ret));
