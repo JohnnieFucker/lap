@@ -6,6 +6,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 shine.js
+.idea/*
 
 # Runtime data
 pids
