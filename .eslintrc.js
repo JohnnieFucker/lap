@@ -2,21 +2,21 @@ module.exports = {
     "extends": "airbnb-base",
     "globals": {
         log: true,
-        useMem: true,
+        useMem: true
     },
     "rules": {
         "indent": ["error", 4],
         "no-console": 0,
         "no-underscore-dangle": 0,
         "no-prototype-builtins": 0,
-        "no-unused-vars":1,
-        "no-plusplus":0,
-        "guard-for-in":2,
-        "comma-dangle":[2, "never"],
-        "no-param-reassign":0,
-        "max-len":0,
-        "no-dynamic-require":0,
-        "object-shorthand":0,
+        "no-unused-vars": 1,
+        "no-plusplus": 0,
+        "guard-for-in": 2,
+        "comma-dangle": [2, "never"],
+        "no-param-reassign": 0,
+        "max-len": 0,
+        "no-dynamic-require": 0,
+        "object-shorthand": 0,
         'no-restricted-syntax': [
             'error',
             // {
@@ -29,12 +29,12 @@ module.exports = {
             // },
             {
                 selector: 'LabeledStatement',
-                message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+                message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
             },
             {
                 selector: 'WithStatement',
-                message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
-            },
-        ],
+                message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
+            }
+        ]
     }
 };

@@ -2,16 +2,16 @@ class TNode {
     constructor(ch) {
         this.v = '';
         this.k = ch;
-        this.c = {};//children
+        this.c = {};// children
     }
 }
 
-let trie = {
+const trie = {
     trieMap: new TNode(''),
-    addWord: function (wordStr, value) {
+    addWord: (wordStr, value) => {
         let testNode = this.trieMap;
         for (let i = 0; i < wordStr.length; i++) {
-            let k = wordStr.charAt(i);
+            const k = wordStr.charAt(i);
             let tmpNode;
             if (testNode.c && testNode.c.hasOwnProperty(k)) {
                 tmpNode = testNode.c[k];
@@ -28,31 +28,31 @@ let trie = {
             testNode = tmpNode;
         }
     },
-    deleteWord: function (wordStr) {
+    deleteWord: (wordStr) => {
         let testNode = this.trieMap;
         for (let i = 0; i < wordStr.length; i++) {
-            let k = wordStr.charAt(i);
+            const k = wordStr.charAt(i);
             if (testNode.c && testNode.c.hasOwnProperty(k)) {
-                if(i===wordStr.length-1){
-                    if(testNode.c[k].c){
-                        if(Object.keys(testNode.c[k].c).length>0){
+                if (i === wordStr.length - 1) {
+                    if (testNode.c[k].c) {
+                        if (Object.keys(testNode.c[k].c).length > 0) {
                             delete testNode.c[k].v;
-                        }else{
+                        } else {
                             delete testNode.c[k];
                         }
                     }
                     return;
                 }
                 testNode = testNode.c[k];
-            }else{
+            } else {
                 return;
             }
         }
     },
-    search: function (wordStr) {
+    search: (wordStr) => {
         let testNode = this.trieMap;
         for (let i = 0; i < wordStr.length; i++) {
-            let k = wordStr.charAt(i);
+            const k = wordStr.charAt(i);
             if (testNode.c && testNode.c.hasOwnProperty(k)) {
                 testNode = testNode.c[k];
             }
@@ -61,7 +61,7 @@ let trie = {
             }
         }
         return null;
-    },
+    }
 };
 
 module.exports = trie;
