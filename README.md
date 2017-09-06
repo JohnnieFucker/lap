@@ -1,2 +1,2 @@
-# lap-nlp
-Learn&amp;Practice of NLP
+# lap
+Learn&amp;Practice
